@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #05070a;
+  --color-slate-900: #0a0c12;
+  --color-slate-850: #12141c;
+  --color-slate-800: #161b28;
+  --color-slate-750: #1a1e2b;
+  --color-slate-700: #22293c;
+  --color-slate-650: #2c354e;
+  
+  --color-amber-500: #f59e0b;
+  --color-amber-400: #fbbf24;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom CSS Scrollbar and extra refined themes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.4);
+}
+
+/* Global design tweaks to match the Sophisticated Dark theme */
+body {
+  background-color: #05070a;
+  color: #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sophisticated card glows and hover configurations */
+.theme-glow-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #161b28 0%, #0a0c12 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.theme-glow-radial {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  background: rgba(245, 158, 11, 0.08);
+  filter: blur(50px);
+  margin-right: -40px;
+  margin-top: -40px;
+  pointer-events: none;
+}
+
+.theme-live-pulse {
+  position: relative;
+}
+.theme-live-pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #f59e0b;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px #f59e0b;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

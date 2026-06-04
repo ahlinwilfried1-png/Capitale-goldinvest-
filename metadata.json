@@ -1,0 +1,6 @@
+{
+  "name": "Capital Gold Invest",
+  "description": "Une plateforme d'investissement fintech moderne, sécurisée et responsive, inspirée des grands standards internationaux.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
